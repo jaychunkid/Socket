@@ -26,7 +26,7 @@ class PokedexManager {
 	}
 
 	// 针对pm名字的搜索
-	synchronized public boolean searchName(String name, Pokemon pm) {
+	synchronized public boolean search(String name, Pokemon pm) {
 		if (nameIndex.containsKey(name)) {
 			Pokemon tmp = nameIndex.get(name);
 			// 如果找到pm则对传入的pok对象赋该pm的信息
@@ -38,7 +38,7 @@ class PokedexManager {
 	}
 
 	// 针对pm全国图鉴编号的搜索
-	synchronized public boolean searchID(Integer id, Pokemon pm) {
+	synchronized public boolean search(Integer id, Pokemon pm) {
 		if (idIndex.containsKey(id)) {
 			Pokemon tmp = idIndex.get(id);
 			// 如果找到pm则对传入的pok对象赋该pm的信息

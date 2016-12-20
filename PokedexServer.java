@@ -104,16 +104,16 @@ class PokedexServer {
 			// 针对格式“#+编号”
 			if (str.charAt(0) == '#' && str.length() > 1 && Character.isDigit(str.charAt(1))) {
 				Integer id = Integer.parseInt(str.substring(1));
-				found = pokedex.searchID(id, tmp);
+				found = pokedex.search(id, tmp);
 			}
 			// 针对搜索pm全国图鉴编号
 			else if (Character.isDigit(str.charAt(0))) {
 				Integer id = Integer.parseInt(str);
-				found = pokedex.searchID(id, tmp);
+				found = pokedex.search(id, tmp);
 			}
 			// 针对搜索pm名字
 			else
-				found = pokedex.searchName(str, tmp);
+				found = pokedex.search(str, tmp);
 
 			print(found, tmp);
 		}
